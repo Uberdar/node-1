@@ -1,12 +1,7 @@
 const FsPromises = require("fs").promises;
 const path = require("path");
 const contactsPath = path.resolve("./db/contacts.json");
-console.log("contactsPath: ", contactsPath);
 
-// console.log(__dirname);
-// console.log(__filename);
-
-// TODO: задокументировать каждую функцию
 async function listContacts() {
   try {
     const getContactsPromise = await FsPromises.readFile(contactsPath, "utf8");
